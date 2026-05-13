@@ -694,6 +694,7 @@
     position: relative;
     width: 90%;
     max-width: 700px;
+    max-height: 90vh;
     background: linear-gradient(135deg, #1A1A1A, #0A0A0A);
     border-radius: 20px;
     overflow: hidden;
@@ -701,13 +702,14 @@
     border: 1px solid rgba(212, 175, 55, 0.2);
     transform: scale(0.95);
     transition: transform 0.4s cubic-bezier(0.17, 0.67, 0.18, 1.23);
-    max-height: 90vh;
     display: flex;
     flex-direction: column;
 }
 .contact-modal-overlay.active .contact-modal-wrapper {
     transform: scale(1);
 }
+
+/* Header stays in normal flow, fixed min-height for predictable offset */
 .contact-modal-header {
     display: flex;
     align-items: center;
@@ -716,6 +718,8 @@
     background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), transparent);
     border-bottom: 1px solid rgba(212, 175, 55, 0.15);
     flex-shrink: 0;
+    min-height: 60px;
+    box-sizing: border-box;
 }
 .contact-modal-header h3 {
     color: #D4AF37;
@@ -737,11 +741,10 @@
     background: #D4AF37; color: #0A0A0A; transform: rotate(90deg);
 }
 
-/* Consent Section Styles */
+/* Consent section — shown before form */
 .contact-consent-section {
     padding: 20px 25px;
     text-align: left;
-    flex-shrink: 0;
 }
 .contact-consent-title {
     color: #D4AF37;
@@ -799,22 +802,15 @@
     box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
 }
 
-/* Modal Body (holds either consent or form) */
-.contact-modal-body {
-    padding: 0;
-    flex: 1 1 auto;
-    min-height: 0;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-}
-
-/* Iframe Container (hidden until consent) */
+/* Form container — absolutely positioned to fill remaining space */
 .contact-form-container {
-    display: none;
-    height: 100%;
-    min-height: 400px;
-    flex: 1;
+    position: absolute;
+    top: 70px; /* header min-height (60px) + padding ≈ 70px */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none; /* hidden until consent */
+    background: #0A0A0A;
 }
 .contact-form-container.active {
     display: block;
@@ -834,6 +830,10 @@
     }
     .contact-modal-header {
         padding: 16px 20px;
+        min-height: 55px;
+    }
+    .contact-form-container {
+        top: 55px; /* match mobile header height */
     }
     .contact-consent-section {
         padding: 16px 20px;
