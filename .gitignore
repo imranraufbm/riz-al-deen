@@ -1,0 +1,14 @@
+# Kilo-specific
+.kilo/
+
+# Logs
+*.log
+server.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Node modules (if future addition)
+node_modules/
