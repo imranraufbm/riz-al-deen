@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -96,7 +96,7 @@
         .masonry-item:hover .item-overlay { opacity: 1; }
         .masonry-item .item-overlay i { color: #D4AF37; font-size: 1.5rem; }
 
-        /* ANIMATIONS — Quick slide-in + scale zoom */
+        /* ANIMATIONS â€” Quick slide-in + scale zoom */
         @keyframes quickSlideIn {
             0% { opacity: 0; transform: translateY(40px) scale(0.92); }
             60% { opacity: 1; transform: translateY(-4px) scale(1.02); }
@@ -741,7 +741,7 @@
     background: #D4AF37; color: #0A0A0A; transform: rotate(90deg);
 }
 
-/* Consent section — shown before form */
+/* Consent section â€” shown before form */
 .contact-consent-section {
     padding: 20px 25px;
     text-align: left;
@@ -827,24 +827,38 @@
     .contact-modal-wrapper {
         width: 95%;
         border-radius: 16px;
+        max-height: 85vh;
     }
     .contact-modal-header {
         padding: 16px 20px;
         min-height: 55px;
     }
-    .contact-form-container {
-        top: 55px; /* match mobile header height */
-    }
+
     .contact-consent-section {
         padding: 16px 20px;
     }
     .contact-consent-title {
         font-size: 1rem;
     }
-    .contact-consent-text {
-        font-size: 0.85rem;
-    }
-}
+     .contact-consent-text {
+         font-size: 0.85rem;
+     }
+
+     /* Adjust form container top for mobile header height */
+     .contact-form-container {
+         top: 55px; /* match mobile header height */
+     }
+
+     /* Allow modal body to scroll */
+     .contact-modal-body {
+         overflow-y: auto;
+     }
+
+     .contact-modal-body#contactConsentSection {
+         overflow-y: visible;
+         max-height: calc(85vh - 60px);
+     }
+ }
 @media (max-width: 480px) {
     .contact-modal-close {
         width: 32px; height: 32px;
@@ -853,12 +867,12 @@
     .consent-checkbox-label {
         font-size: 0.85rem;
     }
-    .consent-continue-btn {
-        padding: 10px 20px;
-        font-size: 0.9rem;
-    }
-}
-     </style>
+      .consent-continue-btn {
+          padding: 10px 20px;
+          font-size: 0.9rem;
+       }
+   }
+</style>
 </head>
 <body>
     <!-- HERO SECTION -->
@@ -901,35 +915,35 @@
             <div class="product-gallery">
                 <div class="masonry-grid">
                     <div class="masonry-item tall animate-in animate-delay-1">
-                        <img src="img/main product mockups (1).png" alt="Riz Al Deen — Front View" loading="lazy">
+                        <img src="img/main product mockups (1).png" alt="Riz Al Deen â€” Front View" loading="lazy">
                         <div class="item-overlay"><i class="fas fa-search-plus"></i></div>
                     </div>
                     <div class="masonry-item animate-in animate-delay-2">
-                        <img src="img/main product mockups (2).png" alt="Riz Al Deen — Side View" loading="lazy">
+                        <img src="img/main product mockups (2).png" alt="Riz Al Deen â€” Side View" loading="lazy">
                         <div class="item-overlay"><i class="fas fa-search-plus"></i></div>
                     </div>
                     <div class="masonry-item wide animate-in animate-delay-3">
-                        <img src="img/main product mockups (3).png" alt="Riz Al Deen — Lifestyle Shot" loading="lazy">
+                        <img src="img/main product mockups (3).png" alt="Riz Al Deen â€” Lifestyle Shot" loading="lazy">
                         <div class="item-overlay"><i class="fas fa-search-plus"></i></div>
                     </div>
                     <div class="masonry-item animate-in animate-delay-4">
-                        <img src="img/main product mockups (4).png" alt="Riz Al Deen — Detail Close-up" loading="lazy">
+                        <img src="img/main product mockups (4).png" alt="Riz Al Deen â€” Detail Close-up" loading="lazy">
                         <div class="item-overlay"><i class="fas fa-search-plus"></i></div>
                     </div>
                     <div class="masonry-item big animate-in animate-delay-5">
-                        <img src="img/main product mockups (5).png" alt="Riz Al Deen — Packaging Detail" loading="lazy">
+                        <img src="img/main product mockups (5).png" alt="Riz Al Deen â€” Packaging Detail" loading="lazy">
                         <div class="item-overlay"><i class="fas fa-search-plus"></i></div>
                     </div>
                     <div class="masonry-item tall animate-in animate-delay-6">
-                        <img src="img/main product male Models (3).png" alt="Riz Al Deen — On Model" loading="lazy">
+                        <img src="img/main product male Models (3).png" alt="Riz Al Deen â€” On Model" loading="lazy">
                         <div class="item-overlay"><i class="fas fa-search-plus"></i></div>
                     </div>
                     <div class="masonry-item animate-in animate-delay-1">
-                        <img src="img/main product male Models (5).png" alt="Riz Al Deen — Model Detail" loading="lazy">
+                        <img src="img/main product male Models (5).png" alt="Riz Al Deen â€” Model Detail" loading="lazy">
                         <div class="item-overlay"><i class="fas fa-search-plus"></i></div>
                     </div>
                     <div class="masonry-item wide animate-in animate-delay-2">
-                        <img src="img/Riz with cigar.png" alt="Riz Al Deen — Lifestyle Portrait" loading="lazy">
+                        <img src="img/Riz with cigar.png" alt="Riz Al Deen â€” Lifestyle Portrait" loading="lazy">
                         <div class="item-overlay"><i class="fas fa-search-plus"></i></div>
                     </div>
                 </div>
@@ -1120,7 +1134,7 @@
                 </div>
                 <!-- Relocated Punjabi Video Showcase -->
                 <div style="margin-bottom: 30px;">
-                    <h3 style="color: #D4AF37; margin-bottom: 15px; font-size: clamp(1.1rem, 2.5vw, 1.4rem);">Punjabi Campaign — Regional Promotion</h3>
+                    <h3 style="color: #D4AF37; margin-bottom: 15px; font-size: clamp(1.1rem, 2.5vw, 1.4rem);">Punjabi Campaign â€” Regional Promotion</h3>
                     <div style="position: relative; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.4); background: #0A0A0A; max-width: 640px; margin: 0 auto;">
                         <video id="punjabiPreview" autoplay muted loop playsinline preload="none" style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block;">
                             <source src="videos/punjabi order campain Riz Al deen perfume.mp4" type="video/mp4">
@@ -1187,7 +1201,7 @@
     <section class="cta" id="cta">
         <div class="container">
             <h2>Order Your Riz Al Deen Today</h2>
-            <p style="text-align: center; margin-bottom: 20px; color: #aaa;">Exclusively for men — a gift from you to him</p>
+            <p style="text-align: center; margin-bottom: 20px; color: #aaa;">Exclusively for men â€” a gift from you to him</p>
             <div class="cta-buttons">
                 <a href="#" class="btn" id="whatsapp-btn">Order via WhatsApp</a>
                 <a href="#gift" class="btn btn-outline">Gift for Loved Ones</a>
@@ -1254,14 +1268,14 @@
                  </div>
              </div>
 
-             <!-- Contact Form Iframe (hidden until consent) -->
-             <div class="contact-modal-body contact-form-container" id="contactFormContainer" style="display: none;">
-                 <iframe class="contact-form-iframe"
-                     src="https://docs.google.com/forms/d/e/1FAIpQLSc1mDf2rtZCkItYe99VTt4Oc82X2mtJAG62zQkqviIlmKZuag/viewform?embedded=true"
-                     width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0">
-                     Loading…
-                 </iframe>
-             </div>
+              <!-- Contact Form Iframe (hidden until consent) -->
+              <div class="contact-modal-body contact-form-container" id="contactFormContainer" style="display: none;">
+                  <iframe class="contact-form-iframe"
+                      src="https://docs.google.com/forms/d/e/1FAIpQLSc1mDf2rtZCkItYe99VTt4Oc82X2mtJAG62zQkqviIlmKZuag/viewform?embedded=true"
+                      width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0">
+                      Loading…
+                  </iframe>
+              </div>
          </div>
      </div>
 
@@ -1639,23 +1653,82 @@
             }
         });
 
-        // Reset modal to consent screen when closed
-        var originalCloseContact = closeContactModal;
-        closeContactModal = function() {
-            if (originalCloseContact) originalCloseContact();
-            // Reset consent state after closing
-            setTimeout(function() {
-                if (consentSection && formContainer) {
-                    consentSection.style.display = 'block';
-                    formContainer.style.display = 'none';
-                    if (consentCheckbox) consentCheckbox.checked = false;
-                    if (consentBtn) {
-                        consentBtn.classList.remove('enabled');
-                        consentBtn.disabled = true;
-                    }
-                }
-            }, 300);
-        };
-    </script>
+         // Reset modal to consent screen when closed
+         var originalCloseContact = closeContactModal;
+         closeContactModal = function() {
+             if (originalCloseContact) originalCloseContact();
+             // Reset consent state after closing
+             setTimeout(function() {
+                 if (consentSection && formContainer) {
+                     consentSection.style.display = 'block';
+                     formContainer.style.display = 'none';
+                     if (consentCheckbox) consentCheckbox.checked = false;
+                     if (consentBtn) {
+                         consentBtn.classList.remove('enabled');
+                         consentBtn.disabled = true;
+                     }
+                 }
+             }, 300);
+         };
+         
+         // Custom Contact Form Submission
+         var customContactForm = document.getElementById('customContactForm');
+         var contactSubmitBtn = document.getElementById('contactSubmitBtn');
+         var formSuccessMessage = document.getElementById('formSuccessMessage');
+         var formErrorMessage = document.getElementById('formErrorMessage');
+         
+         if (customContactForm) {
+             customContactForm.addEventListener('submit', function(e) {
+                 e.preventDefault();
+                 
+                 // Disable button to prevent multiple submissions
+                 contactSubmitBtn.disabled = true;
+                 contactSubmitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
+                 
+                 // Collect form data
+                 var formData = new FormData(customContactForm);
+                 
+                 // Submit to Google Forms
+                 fetch('https://docs.google.com/forms/d/e/1FAIpQLSc1mDf2rtZCkItYe99VTt4Oc82X2mtJAG62zQkqviIlmKZuag/formResponse', {
+                     method: 'POST',
+                     mode: 'no-cors',
+                     headers: {
+                         'Content-Type': 'application/x-www-form-urlencoded',
+                     },
+                     body: new URLSearchParams(formData)
+                 })
+                 .then(function() {
+                     // Success
+                     formSuccessMessage.style.display = 'block';
+                     formErrorMessage.style.display = 'none';
+                     customContactForm.reset();
+                     
+                     // Reset button state
+                     contactSubmitBtn.disabled = false;
+                     contactSubmitBtn.innerHTML = 'Submit';
+                     
+                     // Hide success message after 5 seconds
+                     setTimeout(function() {
+                         formSuccessMessage.style.display = 'none';
+                     }, 5000);
+                 })
+                 .catch(function(error) {
+                     // Error
+                     console.error('Form submission error:', error);
+                     formErrorMessage.style.display = 'block';
+                     formSuccessMessage.style.display = 'none';
+                     
+                     // Reset button state
+                     contactSubmitBtn.disabled = false;
+                     contactSubmitBtn.innerHTML = 'Submit';
+                     
+                     // Hide error message after 5 seconds
+                     setTimeout(function() {
+                         formErrorMessage.style.display = 'none';
+                     }, 5000);
+                 });
+             });
+         }
+     </script>
 </body>
 </html>
